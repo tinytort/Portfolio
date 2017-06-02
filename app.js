@@ -12,8 +12,9 @@ function Project(projects) {
 }
 
 Project.prototype.toHtml = function () {
-    var $newProject = $('.newProjects').clone();
-    console.log($newProject);
+    // console.log($('.newProjects'));
+    var $newProject = $('.template').clone().removeClass('template');
+    console.log('these are the matched elements', $newProject);
     $newProject.find('.title').html(this.title);
     $newProject.find('.date').html(this.date);
     $newProject.find('.img').html(this.img);
