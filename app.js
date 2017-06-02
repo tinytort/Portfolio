@@ -8,15 +8,17 @@ function Project(projects) {
     this.date = projects.date;
     this.img = projects.img;
     this.url = projects.url;
+    
 }
 
 Project.prototype.toHtml = function () {
     var $newProject = $('.newProjects').clone();
-
-    $newProject.find('.newProjects div').html(this.title);
+    console.log($newProject);
+    $newProject.find('.title').html(this.title);
     $newProject.find('.date').html(this.date);
-    $newProject.find('img').html(this.img);
-    $newProject.find('url').attr('href', this.url);
+    $newProject.find('.img').html(this.img);
+    $newProject.find('.url').attr('href', this.url);
+    return $newProject;
 };
 
 projects.forEach(function (project) {
@@ -24,5 +26,6 @@ projects.forEach(function (project) {
 });
 
 objects.forEach(function (object) {
-    $('objects').append(object.toHtml());
+    console.log(object);
+    $('#projectsDiv').append(object.toHtml());
 });

@@ -5,7 +5,7 @@ var projects = [
        title: 'First Project',
        date: '01/2/2017',
        img: 'filepath',
-       url: 'www.com',
+       url: 'http://apple.com/',
     },
    
     {
