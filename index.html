@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="./styles/modules.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
     <title>Document</title>
+
+    <script id ="portfolioTemplate" type="text/x-handlebars-template">
+      <article>
+          <h2>{{title}}</h2>
+          <h6>{{date}}</h6>
+          <img>{{img}}</img>
+          <h5>{{url}}</h5>
+        </article>
+    </script>
+    
 </head>
 
 <body>
@@ -42,6 +52,7 @@
 
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script src="./project.js" rel="text/javascript"></script>
     <script src="./app.js" rel="text/javascript"></script>
     <script src="./view.js" rel="text/javascript"></script>

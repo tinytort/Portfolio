@@ -1,8 +1,8 @@
 'use strict';
-// Tabs \\
+// Tabs
+var viewObj = {};
 $('.tabContent').hide();
 
-var viewObj = {};
 
 viewObj.handleNav = function () {
     $('#navBar').on('click', 'li', function () {
