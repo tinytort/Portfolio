@@ -11,9 +11,7 @@ function Project(projects) {
 }
 
 Project.prototype.toHtml = function () {
-    // console.log($('.newProjects'));
     var $newProject = $('.template').clone().removeClass('template');
-    console.log('these are the matched elements', $newProject);
     $newProject.find('.title').html(this.title);
     $newProject.find('.date').html(this.date);
     $newProject.find('.img').html(this.img);
@@ -31,8 +29,5 @@ objects.forEach(function (object) {
 });
 
 
-// Tabs \\
-
-$('#projectsDiv').hide();
 
 
