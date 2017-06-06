@@ -18,17 +18,6 @@ Project.prototype.toHtml = function () {
 }
 
 
-
-
-// Project.prototype.toHtml = function () {
-//     var $newProject = $('.template').clone().removeClass('template');
-//     $newProject.find('.title').html(this.title);
-//     $newProject.find('.date').html(this.date);
-//     $newProject.find('.img').html(this.img);
-//     $newProject.find('.url').attr('href', this.url);
-//     return $newProject;
-// };
-
 projects.forEach(function (project) { //eslint-disable-line
     objects.push(new Project(project))
 });
