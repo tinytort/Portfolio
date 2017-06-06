@@ -8,7 +8,6 @@ function Project(projects) {
     this.date = projects.date;
     this.img = projects.img;
     this.url = projects.url;
-    
 }
 
 Project.prototype.toHtml = function () {
@@ -30,3 +29,10 @@ objects.forEach(function (object) {
     console.log(object);
     $('#projectsDiv').append(object.toHtml());
 });
+
+
+// Tabs \\
+
+$('#projectsDiv').hide();
+
+

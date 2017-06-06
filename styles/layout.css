@@ -1,0 +1,44 @@
+
+
+
+
+
+
+h1 {
+  text-align: center;
+  padding: 180px;
+  font-size: 120px;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 100;
+}
+
+
+
+/*Nav Bar*/
+.icon-menu {
+  text-align: right;
+}
+
+li {
+  width: 20px;
+  display: inline;
+  font-size: 20px;
+}
+
+
+
+/*Template*/
+.template {
+  display: none;
+}
+
+
+
+
+@media only screen and (min-width: 640px) {
+  #navBar {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+}
+
