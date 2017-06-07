@@ -22,8 +22,7 @@ Project.prototype.toHtml = function () {
 $.ajax({
     url: './scripts/data.json',
     type: 'GET',
-    success: function (data, statusCode, response) {
-        console.log(data, statusCode, response);
+    success: function (data) {
         data.forEach(function (project) { //eslint-disable-line
             objects.push(new Project(project))
         });
@@ -33,8 +32,8 @@ $.ajax({
             $('#projectsDiv').append(object.toHtml());
         });
     },
-    error: function (data, statusCode, response) { //eslint-disable-line
-        console.log(error); //eslint-disable-line
+    error: function (err) { //eslint-disable-line
+        console.log(err); //eslint-disable-line
 
     }
 });
