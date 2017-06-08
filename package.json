@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "## User Stories As a user, I want to be able to find Haley's work with ease. As a user, I want this site to be mobile optimized. As a user, I want to find relevant details like contact information, so I can contact Haley.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinytort/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinytort/Portfolio/issues"
+  },
+  "homepage": "https://github.com/tinytort/Portfolio#readme"
+}

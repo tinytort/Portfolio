@@ -1,0 +1,39 @@
+
+h1 {
+  text-align: center;
+  padding-top: 185px;
+  padding-bottom: 185px;
+  font-size: 120px;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 100;
+}
+
+.icon-menu {
+  height: 80px;
+}
+
+
+
+/*Template*/
+.template {
+  display: none;
+}
+
+.mainNav ul {
+  display: none;
+
+}
+
+.mainNav:hover ul {
+  display: block;
+
+}
+
+
+@media only screen and (min-width: 640px) {
+  #navBar {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+}
+
