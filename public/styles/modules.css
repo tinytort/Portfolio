@@ -1,0 +1,11 @@
+/*Nav Bar*/
+.icon-menu {
+  text-align: right;
+}
+
+li {
+  width: 20px;
+  display: inline;
+  font-size: 20px;
+}
+
