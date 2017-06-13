@@ -29,6 +29,10 @@ h1 {
 
 }
 
+#projectsDiv {
+  margin-bottom: 800px;
+}
+
 
 @media only screen and (min-width: 640px) {
   #navBar {

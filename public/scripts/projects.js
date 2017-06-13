@@ -3,11 +3,12 @@ var app = {};
 
 (function(module) {
 
-    function Project(projects) {
-        this.title = projects.title;
-        this.date = projects.date;
-        this.img = projects.img;
-        this.url = projects.url;
+    function Project(project) {
+        this.title = project.title;
+        this.date = project.date;
+        this.img = project.img;
+        this.url = project.url;
+        this.linesOfCode = project.linesOfCode;
     }
     Project.objects = [];
 
@@ -27,7 +28,10 @@ var app = {};
                 Project.objects = data.map(function (project) { //eslint-disable-line
                      return new Project(project);
                 });
-
+                Project.totalLines = Project.objects.reduce(function (acc, curr) {
+                    return acc + curr.linesOfCode;
+                }, 0)
+                
                 Project.objects.forEach(function (object) {
                     console.log(object);
                     $('#projectsDiv').append(object.toHtml());
