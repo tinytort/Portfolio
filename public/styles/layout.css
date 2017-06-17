@@ -31,6 +31,7 @@ h1 {
 
 #projectsDiv {
   margin-bottom: 800px;
+  justify-content: inline;
 }
 
 
