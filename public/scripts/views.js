@@ -1,7 +1,6 @@
 'use strict';
 var app = app || {};
 
-
 (function (module) {
     const viewProj = {};
 
@@ -16,7 +15,7 @@ var app = app || {};
         }, 700);
     };
     module.viewProj = viewProj;
-})(app);
+}(app));
 
 (function (module) {
     const viewBio = {};
@@ -24,7 +23,7 @@ var app = app || {};
     viewBio.init = function () {
         $('div[data-tab = "projects"]').hide();
         $('div[data-tab = "bio"]').show();
-
+        console.log(app.repos.all);
         // FROM STACK OVERFLOW https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
         $('html, body').animate({
             scrollTop: $('#scroll').offset().top - 100
