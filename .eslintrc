@@ -17,6 +17,8 @@
 
   "globals": {
     // e.g. "angular": true
+    "app": true,
+    "page": true
   },
 
   "rules": {
@@ -55,7 +57,6 @@
     "no-undef": 2,                    // disallow use of undeclared variables unless mentioned in a /*global */ block
     "no-undefined": 2,                // disallow use of undefined variable (off by default)
     "no-unused-vars": 2,              // disallow declaration of variables that are not used in the code
-    "no-use-before-define": 2,        // disallow use of variables before they are defined
 
 
     ////////// Stylistic Issues //////////

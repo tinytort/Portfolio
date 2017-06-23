@@ -1,7 +1,7 @@
 'use strict';
 var app = {};
 
-(function(module) {
+(function (module) {
 
     function Project(project) {
         this.title = project.title;
@@ -26,12 +26,12 @@ var app = {};
             type: 'GET',
             success: function (data) {
                 Project.objects = data.map(function (project) { //eslint-disable-line
-                     return new Project(project);
+                    return new Project(project);
                 });
                 Project.totalLines = Project.objects.reduce(function (acc, curr) {
                     return acc + curr.linesOfCode;
                 }, 0)
-                
+
                 Project.objects.forEach(function (object) {
                     console.log(object);
                     $('#projectsDiv').append(object.toHtml());
