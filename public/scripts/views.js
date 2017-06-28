@@ -5,9 +5,9 @@ var app = app || {};
     const viewProj = {};
 
     viewProj.init = function () {
-        $('div[data-tab = "bio"]').hide();
+        $('div[data-section = "bio"]').hide();
 
-        $('div[data-tab = "projects"]').show();
+        $('div[data-section = "projects"]').show();
 
         // FROM STACK OVERFLOW https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
         $('html, body').animate({
@@ -21,9 +21,8 @@ var app = app || {};
     const viewBio = {};
 
     viewBio.init = function () {
-        $('div[data-tab = "projects"]').hide();
-        $('div[data-tab = "bio"]').show();
-        console.log(app.repos.all);
+        $('div[data-section = "projects"]').hide();
+        $('div[data-section = "bio"]').show();
         // FROM STACK OVERFLOW https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
         $('html, body').animate({
             scrollTop: $('#scroll').offset().top - 100

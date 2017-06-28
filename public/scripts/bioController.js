@@ -5,7 +5,7 @@ var app = app || {};
     const bioController = {};
 
     bioController.init = function () {
-        app.repos.requestRepos(app.viewBio.init);
+        app.Repo.requestRepos(app.viewBio.init);
     }
 
     module.bioController = bioController;
