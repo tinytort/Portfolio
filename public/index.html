@@ -19,6 +19,13 @@
             <h5>{{url}}</h5>
         </article>
     </script>
+    <script id="repoTemplate" type="text/x-handlebars-template">
+        <article>
+            <p><a href="{{url}}">{{name}}</a></p>
+
+
+        </article>
+    </script>
 
 </head>
 
@@ -35,9 +42,9 @@
     <h1> Hey, I'm Haley</h1>
 
     <div id="scroll"></div>
-    <div data-tab="projects" class="tabContent" id="projectsDiv">
+    <div data-section="projects" class="tabContent" id="projectsDiv">
     </div>
-    <div data-tab="bio" class="tabContent">
+    <div data-section="bio" class="tabContent" id="bioDiv">
         <h2> Bio</h2>
     </div>
 

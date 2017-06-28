@@ -13,7 +13,6 @@ app.get('/', function (request, response) {
 });
 
 app.get('/github/*', function (request, response) {
-    console.log(process.env.GITHUB_TOKEN)
     requestProxy({
         url: `https://api.github.com/${request.params[0]}`,
         headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` }

@@ -2,16 +2,29 @@
 var app = app || {};
 
 (function (module) {
-    const repos = {};
+    function Repo(data) {
+        this.url = data.url;
+        this.name = data.name;
+    }
 
-    repos.all = [];
+    Repo.all = [];
 
-    repos.requestRepos = function (callback) {
-        console.log('I work');
+    Repo.prototype.toHtml = function () {
+        var tempFiller = Handlebars.compile($('#repoTemplate').html()); //eslint-disable-line
+        return tempFiller(this);
+    }
+    Repo.requestRepos = function (callback) {
         $.get('github/user/repos')
-            .then(data => repos.all = data, err => console.log(err))
+            .then(data => {
+                Repo.all = data.map((repoData) => {
+                    return new Repo(repoData);
+                });
+                Repo.all.forEach((repo) => {
+                    $('#bioDiv').append(repo.toHtml());
+                })
+            }, err => console.log(err))
             .then(callback);
 
     };
-    module.repos = repos;
+    module.Repo = Repo;
 }(app));

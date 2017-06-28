@@ -33,7 +33,6 @@ var app = {};
                 }, 0)
 
                 Project.objects.forEach(function (object) {
-                    console.log(object);
                     $('#projectsDiv').append(object.toHtml());
                 });
             },
